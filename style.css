@@ -1,0 +1,178 @@
+
+body { 
+height: 100%;
+width: 100%;
+background-image: url('clouds2.png')
+}
+
+.heading{
+  font-family: arial;
+  font-weight: bolder;
+  font-size: 50px;
+display: flex;
+justify-content: center;
+color: hotpink;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-container{
+  display: flexbox;
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+display: grid;
+    background-color: #00000000;
+    border: 1px solid #00000000;
+  grid-template-rows: repeat(2, 1fr); 
+  grid-template-columns: repeat(8,1fr);
+  padding:50px;
+}
+
+.grid-item{
+  padding:10px
+}
+@keyframes horizontal-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+.grid-item:hover {
+  animation: horizontal-shake 0.5s ease-in-out infinite;
+}
+
+
+.record{
+position: static;
+z-index:2;
+bottom: 20px;
+right: 30px;
+}
+
+.headphones{
+position: absolute;
+size: 10px;
+bottom: 10px;
+left:10px;
+z-index: 2;
+}
+@keyframes horizontal-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.headphones:hover {
+  animation: horizontal-shake 0.5s ease-in-out infinite;
+}
+
+.card {
+    padding: 20px;
+    margin: 100px;
+    position: absolute;
+  display: flexbox;
+  align-content: center;
+  box-sizing: border-box;
+  width: fit-content;
+  background: white;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(147, 10, 10, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:bold;
+  font-size: 25px;
+  color: black;
+}
+
+.card:hover {
+  border: 5px solid rgba(238, 55, 171, 0.805);
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(1) rotateZ(1.7deg);
+}
+.image {
+    position: absolute;
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    margin: 0px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    align-content: center;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.music {
+position: absolute;
+left: 590px;
+top: 20px;
+align-items: center;
+display: flex;
+  background: #ffffff;
+  color: #fafafa;
+  padding: 0rem;
+  border-radius: 50px;
+  box-shadow: 0 0 2px 2px #e6599d9b; /* starting glow */
+  animation: breathe 6s ease-in-out infinite;
+  transition: box-shadow 0.2s;
+}
+
+/* pause motion on user intent */
+.breathing-card:hover,
+.breathing-card:focus-visible {
+  animation-play-state: paused;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 2px 2px #f169d8ab;
+  }
+  50% {
+    box-shadow: 0 0 20px 8px #b64d9aad;
+  }
+}
+
+/* motion-sensitive users */
+@media (prefers-reduced-motion: reduce) {
+  .breathing-card {
+    animation: none;
+  }
+}
+
+.apple {
+position: absolute;
+top: 50px;
+right: 50px;
+}
+@keyframes horizontal-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+.apple {
+  display: inline-block; 
+}
+
+.apple:hover {
+  animation: horizontal-shake 0.5s ease-in-out infinite;
+}
